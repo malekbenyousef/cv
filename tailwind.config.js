@@ -41,6 +41,9 @@ module.exports = {
 				title: "title 3s ease-out forwards",
 				"fade-left": "fade-left 3s ease-in-out forwards",
 				"fade-right": "fade-right 3s ease-in-out forwards",
+                "anime-slide":  "anime-slide 4.2s cubic-bezier(.22,1,.36,1) forwards",
+                "bobble":       "bobble 2s ease-in-out infinite",
+                "bubble-pop":   "bubble-pop 0.35s ease 0.55s both",
 			},
 			keyframes: {
 				"fade-in": {
@@ -80,8 +83,25 @@ module.exports = {
 					},
 					"100%": {
 						opacity: "0%",
+
 					},
-				},
+                    "anime-slide": {
+                        "0%":   { transform: "translateX(-120%) translateY(40px)", opacity: "0" },
+                        "12%":  { transform: "translateX(10px) translateY(0)",     opacity: "1" },
+                        "18%":  { transform: "translateX(0) translateY(0)" },
+                        "72%":  { transform: "translateX(0) translateY(0)",        opacity: "1" },
+                        "100%": { transform: "translateX(-130%) translateY(0)",    opacity: "0" },
+                    },
+                    "bobble": {
+                        "0%,100%": { transform: "translateY(0)" },
+                        "50%":     { transform: "translateY(-5px)" },
+                    },
+                    "bubble-pop": {
+                        "0%":   { transform: "scale(0.5)", opacity: "0" },
+                        "60%":  { transform: "scale(1.08)", opacity: "1" },
+                        "100%": { transform: "scale(1)",   opacity: "1" },
+                    },
+                },
 				title: {
 					"0%": {
 						"line-height": "0%",
