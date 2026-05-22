@@ -25,8 +25,8 @@ export const Header: React.FC<Props> = ({ project }) => {
   };
 
   const handleLinkClick = (type: "url" | "repo") => {
-    if (type === "url")  showToast("No live demo", "This project doesn't have a website... yet 👀");
-    if (type === "repo") showToast("Private repository", "The code lives in a vault. A very secure vault.");
+    if (type === "url")  showToast("No live demo", "This project doesn't have a website.");
+    if (type === "repo") showToast("Private repository", "This repository is private.");
   };
 
   const links: { label: string; href?: string; type?: "url" | "repo" }[] = [];

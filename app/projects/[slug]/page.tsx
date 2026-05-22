@@ -33,10 +33,8 @@ export default async function PostPage({ params }: Props) {
             <Header project={project} />
             <ReportView slug={project.slug} />
 
-            {/* Changed from flex to a grid layout */}
             <article className="container max-w-7xl px-4 py-16 mx-auto lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
                 
-                {/* Left Column: Things I Learned & Skills */}
                 <div className="lg:col-span-4 flex flex-col space-y-8">
                     {project.thinking && (
                         <div>
@@ -72,7 +70,6 @@ export default async function PostPage({ params }: Props) {
                     )}
                 </div>
 
-                {/* Right Column: MDX Content (Your project screenshot) */}
                 <div className="lg:col-span-8 prose prose-zinc prose-quoteless max-w-none">
                     <Mdx code={project.body.code} />
                 </div>
